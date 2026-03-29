@@ -68,3 +68,4 @@ export const formatAddress = (address: string, startChars = 6, endChars = 4): st
 export const stxToMicroStx = (stx: number): number => Math.floor(stx * 1_000_000);
 
 export const microStxToStx = (microStx: number): number => microStx / 1_000_000;
+export const getAddressVersion = (addr: string) => addr.startsWith('SP') ? 22 : 26;
